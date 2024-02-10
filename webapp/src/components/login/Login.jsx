@@ -40,7 +40,7 @@ function Login() {
             localStorage.setItem("token", data.token)
         }
 
-        navigate("/user_home")
+        navigate(`/user_home/${data.id}`)
     }
     return (
 

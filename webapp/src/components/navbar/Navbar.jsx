@@ -35,7 +35,7 @@ function NavBar() {
                 </Link>
               </Col>
               <Col>
-                <Link className={`${styles.containerNav}`} to={'/user_home'}>
+                <Link className={`${styles.containerNav}`} to={'/user_home/:id'}>
                   <FaHouseUser className='color-white' />
                 </Link>
               </Col>

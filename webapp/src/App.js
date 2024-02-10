@@ -16,7 +16,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/' element={<Main />} />
-          <Route path='/user_home' element={<MainUser/>}/>
+          <Route path='/user_home/:id' element={<MainUser/>}/>
           <Route path='/post/:id' element={<PostDetails/>}/>
         </Routes>
     </BrowserRouter>

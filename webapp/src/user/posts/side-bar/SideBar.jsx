@@ -16,9 +16,6 @@ function SideBar() {
         </Button>
         <ModalePost />
         <Button variant="success" size="lg">
-          MODIFICA
-        </Button>
-        <Button variant="success" size="lg">
           SETTINGS
         </Button>
         <Button variant="secondary" size="lg" onClick={() => {

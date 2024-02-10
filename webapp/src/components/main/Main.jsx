@@ -1,11 +1,11 @@
 import NavBar from "../navbar/Navbar"
 import styles from './Main.module.css'
-import { Col, Container, Row, Card, Button, CardHeader } from "react-bootstrap"
+import { Col, Container, Row, Card, Button} from "react-bootstrap"
 import { Search } from "../search/Search"
 import Welcome from "./Welcome"
 import noImg from '../../thumbnails/noImg.png'
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import {Link, json } from "react-router-dom"
 import { Footer } from "../footer/Footer"
 
 
