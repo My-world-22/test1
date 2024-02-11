@@ -15,12 +15,12 @@ export default function useJwt() {
    }
 
    const userData = {
-      userId: localStorage.getItem("userId"), // dal localStorate o dall'url........
+      userId: localStorage.getItem("userId"), 
       token: localStorage.getItem("token"),
    }
 
    useEffect(() => {
-      // Se non c'è un userId o il token reindirizzo l'utente alla pagina di login
+
       if (!userData.userId || !userData.token) {
          navigate("/login")
       }

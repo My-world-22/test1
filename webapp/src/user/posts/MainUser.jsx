@@ -51,7 +51,7 @@ const MainUser = () => {
         </Row>
         <Row>
           {post.map((post, id) => (
-            <Col key={id}  className='d-flex mt-5 justify-content-center'>
+            <Col key={id} className='d-flex mt-5 justify-content-center'>
               <Card style={{ width: '18rem' }} className='m-3 text-center'>
                 <Card.Img variant="top" src={noImg} />
                 <Card.Body>
@@ -60,15 +60,33 @@ const MainUser = () => {
                     {post.description}
                   </Card.Text>
                   <Link to='/post/:id' >
-                    <Button variant="success">dettagli</Button>
+                    <Button variant="success">modifica</Button>
                   </Link>
+
+                  <Button
+                    variant="danger"
+                    onClick={(e) => {
+                      fetch(`${process.env.REACT_APP_ENDPOINT_BACKEND}/api/product/` + id, {
+                        method: "DELETE",
+                        headers: { Authorization: `Bearer ${token}` }
+                      }).then((res) => {
+                        if (!res.ok) {
+                          throw new Error('qualcosa è andato storto!')
+                        }
+                       alert('post eliminato!')
+                      })
+                 
+                        .catch((e) => { console.log(e) })
+                    }}
+                  >elimina</Button>
+
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   )
 }
