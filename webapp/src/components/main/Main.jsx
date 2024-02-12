@@ -15,7 +15,7 @@ export const Main = () => {
 
     const [post, SetPost] = useState([])
     useEffect(() => {
-       fetch(`${process.env.REACT_APP_ENDPOINT_BACKEND}/api/product`)
+       fetch(`${process.env.REACT_APP_ENDPOINT_BACKEND}/api/product/`)
           .then(response => response.json())
            .then(json => SetPost(json))
     }, [])
